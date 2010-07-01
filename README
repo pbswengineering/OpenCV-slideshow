@@ -1,0 +1,51 @@
+You must give a speech but you've got nothing interesting to say?
+Believe me, a couple of shiny powerpoint slides won't be enough to
+save you from your bored audience's rage; not without my
+OpenCV-powered optical slide changer, at least!
+
+This nifty little tool allows you to go through your boring slides by
+showing a green object to your webcam. It works by simulating the
+SPACE key pressure each time a green object is detected; I believe
+that any serious presentation tool recognizes such key as "go to next
+slide".
+
+You could use virtually everything green; I used it myself with a
+black glove that has a big green-filled circle in the middle of the
+palm. I've also tested it with green marker pens and... chairs.
+
+The color recognition process is based upon the R(ed) G(reen) B(blue)
+image representation: to be recognized, an object must have some
+pixels who's green component is GREATER than a fixed value; also, the
+green/red ratio and green/blue ratio must be LESS then two fixed
+values. The ratios are expressed as 0..100 integer values instead of
+the usual 0.0..1.0 real ones, think to them as a kind of
+percentage... Geez OK, I can hear your complaints but OpenCV sliders
+won't le me use real numbers and I'm too lazy to use another GUI
+toolkit, that's it!
+
+The program has three sliders that allows you to adjust such values
+accordingly: since the program's performances depends a lot upon the
+environment (green shades, light), I strongly encourage you to find
+your optimal setup before you do your speech. You can guess the best
+values for the parameters by running the program and showing your
+green object to the webcam: by moving the mouse over the image on the
+screen you can see the RGB components of each pixels and
+
+You can store the color recognition parameters values that you find
+most suitable into config.h and then recompile the program. Into that
+file there are also the following parameters that you can change:
+  * WIDTH: the webcam frame width in pixels (e.g. 640);
+  * HEIGHT: the webcam frame height in pixels (e.g. 480);
+  * DELAY: the minimum amount of delay in seconds between each slide;
+           during this time, even if green is detected, there won't be
+           any slide change.
+
+To use this tool you need to have the classical C++ toolchain, OpenCV
+and xorg development files and, of course, a V4L1 (not 2!) supported
+webcam; I used it with an UCV based webcam without problems. The
+compile process takes just a "make", if you have installed everything
+that's needed.
+
+Cheers!
+
+Paolo
