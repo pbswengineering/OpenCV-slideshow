@@ -85,7 +85,7 @@ int searchy = -1;
 int lastx = -100;
 int lasty = -100;
 bool idle = false;
-bool calibration = true;
+bool calibration = false;
 int slides = 0;
 
 time_t last_time = 0;
