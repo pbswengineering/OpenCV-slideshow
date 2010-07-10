@@ -1,0 +1,17 @@
+Source: opencv-slideshow
+Section: utils
+Priority: extra
+Maintainer: Paolo Bernardi <villa.lobos@tiscali.it>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.3
+Homepage: http://paolobernardi.wordpress.com/
+
+Package: opencv-slideshow
+Architecture: any
+Depends: ${shlibs:Depends} 
+Description: change slide showing a green object to the webcam
+ This OpenCV-powered program simulates the SPACE key pressure
+ anytime it recognizes a green object on the webcam; that key is
+ used by any decent slideshow tool to go to the next slide The levels
+ of green and the ratios green/blue and green/red can be manipulated
+ in real time, to adapt them to the current environment.

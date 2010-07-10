@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=OpenCV slideshow
+Comment=Change slide by showing a green object to the webcam
+Exec=/usr/bin/opencv-slideshow
+Icon=/usr/share/opencv-slideshow/opencv-slideshow.svg
+Terminal=false
+Type=Application
+Categories=GNOME;Application;Utility;
+StartupNotify=true
