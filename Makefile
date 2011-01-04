@@ -2,7 +2,7 @@
 
 CC=g++
 
-LDFLAGS=-lcv -lhighgui -lX11
+LDFLAGS=-lcv -lcvaux -lcxcore -lhighgui -lX11
 TARGET=opencv-slideshow
 SOURCE=$(TARGET).cpp
 HEADERS=config.h
